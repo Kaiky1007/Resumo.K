@@ -1,56 +1,63 @@
-# Resumo.K
-# Resumo Automático de Textos com Flask e Machine Learning
+# 📑 Resumo.K - Resumidor de Textos em Português com Machine Learning
 
-Este projeto cria um aplicativo web para resumir textos automaticamente utilizando o modelo `facebook/bart-large-cnn` da Hugging Face, juntamente com o Flask para criação da interface web. O aplicativo também integra o **LanguageTool** para corrigir o texto gerado e melhorar a qualidade do resumo.
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Flask](https://img.shields.io/badge/Flask-2.0.1-green.svg)
+![NLTK](https://img.shields.io/badge/NLTK-3.6.2-orange.svg)
 
-## Funcionalidades
+O Resumo.K é uma aplicação web que utiliza técnicas de Processamento de Linguagem Natural (NLP) para resumir automaticamente textos em português, destacando as informações mais relevantes.
 
-- Geração automática de resumos com o modelo BART.
-- Correção gramatical do texto original e do resumo gerado utilizando **LanguageTool**.
-- Interface simples com Flask para interação com o usuário.
+## ✨ Funcionalidades
 
-## Tecnologias Utilizadas
+- Resumo automático de textos em português
+- Interface web simples e intuitiva
+- Algoritmo baseado em frequência de palavras e importância de sentenças
+- Processamento de textos de diferentes tamanhos e complexidades
 
-- **Flask**: Framework web em Python para construção da interface.
-- **Transformers (Hugging Face)**: Biblioteca para manipulação de modelos de NLP como o BART.
-- **LanguageTool**: Ferramenta para correção gramatical de textos.
-- **Torch**: Framework utilizado para rodar o modelo de aprendizado de máquina.
-- **HTML/CSS**: Para a criação da interface.
+## 🛠️ Tecnologias Utilizadas
 
-## Como Rodar o Projeto
+- **Python** (Linguagem principal)
+- **Flask** (Framework web)
+- **NLTK** (Processamento de linguagem natural)
+- **HTML/CSS** (Interface do usuário)
 
-### Requisitos
+## 🚀 Como Executar o Projeto
 
-1. Python 3.6+ instalado.
-2. Dependências necessárias:
-   - `transformers`
-   - `torch`
-   - `flask`
-   - `language_tool_python`
-   
-### Passos para rodar o projeto 
+### Pré-requisitos
 
-### 1. Clone este repositório:
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes Python)
 
-   ```bash
-   git clone https://github.com/Kaiky1007/Resumo.K.git
-   cd Resumo.K.git
-   ```
+### Instalação
 
-### 2. Instale as dependências:
-    
-    pip install -r requirements.txt
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/resumo.k.git
+cd resumo.k
+```
 
-### 3. Rodar o servidor Flask:
+2. Crie e ative um ambiente virtual (recomendado):
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate    # Windows
+```
 
-    python app.py
+3. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
 
-### 4. Acesse a aplicação em seu navegador em:
-    http://127.0.0.1:5000/
-    
-### Arquivos Principais
-- app.py: Código Python principal que roda o servidor Flask, integra o modelo de resumo e o LanguageTool.
+4. Baixe os recursos do NLTK (execute no terminal Python):
+```python
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+```
 
-- templates/index.html: Interface web onde o usuário pode inserir o texto e visualizar o resumo.
+### Executando a Aplicação
 
-- requirements.txt: Lista de dependências para instalação.
+```bash
+python app.py
+```
+
+Acesse a aplicação no navegador: [http://localhost:5000](http://localhost:5000)
