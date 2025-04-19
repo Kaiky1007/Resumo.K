@@ -1,8 +1,23 @@
-Texto 1:
-A inteligência artificial tem se tornado uma das tecnologias mais importantes do século XXI. Ela está presente em diversas áreas, como saúde, educação, transporte e entretenimento. Com o avanço dos algoritmos de aprendizado de máquina, os sistemas de IA conseguem processar grandes volumes de dados e tomar decisões de forma autônoma. No entanto, é importante discutir os impactos éticos e sociais dessa tecnologia. Questões como privacidade, viés algorítmico e substituição de empregos são temas que precisam ser abordados. Apesar dos desafios, a inteligência artificial tem o potencial de transformar positivamente a sociedade, desde que seja utilizada de forma responsável e transparente.
+TESTE 1
 
-Texto 2:
-O aquecimento global é um dos maiores desafios enfrentados pela humanidade. Ele é causado principalmente pela emissão de gases de efeito estufa, como o dióxido de carbono, provenientes da queima de combustíveis fósseis. As consequências do aquecimento global incluem o aumento das temperaturas médias, o derretimento das calotas polares e a elevação do nível do mar. Além disso, eventos climáticos extremos, como furacões e secas, têm se tornado mais frequentes. Para combater esse problema, é essencial adotar fontes de energia renováveis, reduzir o desmatamento e promover a conscientização ambiental. Somente com ações coletivas será possível mitigar os impactos das mudanças climáticas.
+A inteligência artificial está revolucionando a educação em múltiplos aspectos. 
+Professores agora utilizam ferramentas baseadas em IA para personalizar 
+o aprendizado de acordo com o ritmo de cada aluno. Estudos recentes 
+demonstram um aumento de 30% na retenção de conteúdo quando são utilizados 
+sistemas adaptativos. No Brasil, escolas pioneiras já começaram a adotar 
+essas tecnologias em salas de aula. Plataformas de ensino adaptativo 
+analisam em tempo real o desempenho dos estudantes e ajustam o conteúdo. 
+Especialistas afirmam que essa tendência só tende a crescer nos próximos anos, 
+com a IA se tornando uma ferramenta complementar essencial para educadores.
 
-Texto 3:
-A leitura é uma atividade fundamental para o desenvolvimento intelectual e emocional. Por meio dos livros, é possível adquirir conhecimento, expandir o vocabulário e estimular a criatividade. Além disso, a leitura ajuda a melhorar a concentração e a empatia, permitindo que as pessoas compreendam diferentes perspectivas. Em um mundo cada vez mais digital, é importante incentivar o hábito da leitura desde cedo, especialmente entre crianças e jovens. Bibliotecas, clubes de leitura e plataformas digitais são ferramentas que podem facilitar o acesso a livros e promover o interesse pela leitura. Investir nesse hábito é investir no futuro de uma sociedade mais culta e consciente.
+TESTE 2 - Impactos das Mudanças Climáticas na Biodiversidade Amazônica
+
+A Floresta Amazônica, frequentemente referida como o 'pulmão do mundo', enfrenta desafios sem precedentes devido às mudanças climáticas globais. Estudos recentes indicam que o aumento médio de temperatura em 1,5°C nos últimos 50 anos já alterou significativamente os padrões de precipitação na região. Essas alterações estão diretamente ligadas à redução na diversidade de espécies arbóreas nativas, com estimativas apontando para o desaparecimento de aproximadamente 20% das espécies endêmicas até 2050 se o atual ritmo de aquecimento continuar.
+Além disso, o regime hidrológico modificado está afetando o ciclo reprodutivo de inúmeras espécies animais. Pesquisadores do INPA observaram que pelo menos 78 espécies de aves migratórias alteraram seus padrões de deslocamento na última década. O fenômeno do 'secamento atmosférico', causado pelo desmatamento combinado com o aquecimento global, está criando ambientes inóspitos para anfíbios, com redução de 45% nas populações de sapos e pererecas em áreas monitoradas.
+A comunidade científica alerta para o risco de savanização de partes da floresta, processo que transformaria áreas originalmente úmidas em regiões semiáridas. Modelos climáticos projetam que 40% da Amazônia poderá sofrer esse processo até o final do século, com consequências catastróficas para o equilíbrio ecológico global e para o regime de chuvas em toda a América do Sul.
+
+TESTE 3 - A Revolução do Home Office no Mercado Brasileiro
+
+Nos últimos três anos, o mercado de trabalho brasileiro passou por uma transformação radical no que diz respeito aos modelos de trabalho remoto. Dados do IBGE revelam que o número de profissionais em regime home office saltou de 5% em 2019 para 32% em 2023, um crescimento sem precedentes acelerado pela pandemia, mas que se manteve mesmo após o fim das restrições sanitárias.
+Especialistas em recursos humanos apontam que essa mudança veio para ficar, com 68% das médias e grandes empresas adotando modelos híbridos permanentemente. O setor de tecnologia lidera essa transição, com 92% das vagas oferecendo flexibilidade geográfica. Contudo, desafios persistem: 43% dos trabalhadores relatam dificuldades em separar vida pessoal e profissional, enquanto empregadores destacam preocupações com produtividade e segurança de dados.
+O fenômeno também está remodelando o mercado imobiliário, com aumento de 27% na procura por propriedades em cidades do interior, onde o custo de vida é menor. Paralelamente, coworkings em bairros residenciais das grandes cidades experimentam crescimento de 300%, indicando que o futuro do trabalho será cada vez mais descentralizado, porém não necessariamente totalmente remoto.

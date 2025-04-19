@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumo.K</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Resumidor de Texto </h1>
-    <form method="POST">
-        <label for="texto">Digite ou cole seu texto abaixo:</label><br><br>
-        <textarea name="texto" required></textarea><br>
-        <button type="submit">Gerar Resumo</button>
-    </form>
+    <h1>📑 Resumidor de Texto 📑</h1>
+    
+    <!-- Adicione esta parte para mostrar mensagens de erro -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <p style="color: red;">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
 
-    {% if resumo %}
-    <div class="resumo">
-        <h2>Resumo:</h2>
-        <p>{{ resumo }}</p>
-    </div>
-    {% endif %}
+    <form method="POST">
+        <div class="container">
+            <label for="texto">Digite ou cole seu texto abaixo:</label>
+            <textarea name="texto" id="texto" rows="10" required placeholder="Cole seu texto em português aqui:">{{ texto }}</textarea>
+            
+            <button type="submit">Gerar Resumo</button>
+
+            <div class="resumo-box">
+                <label for="resumo">Resumo Gerado:</label>
+                <textarea id="resumo" readonly placeholder="Resumo gerado aqui:">{{ resumo }}</textarea>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
