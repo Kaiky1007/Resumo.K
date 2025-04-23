@@ -47,13 +47,6 @@ venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 ```
 
-4. Baixe os recursos do NLTK (execute no terminal Python):
-```python
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-```
-
 ### Executando a Aplicação
 
 ```bash
