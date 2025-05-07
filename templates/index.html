@@ -19,10 +19,16 @@
         {% endif %}
     {% endwith %}
 
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <div class="container">
             <label for="texto">Digite ou cole seu texto abaixo:</label>
-            <textarea name="texto" id="texto" rows="10" required placeholder="Cole seu texto em português aqui:">{{ texto }}</textarea>
+            <textarea name="texto" id="texto" rows="10" placeholder="Cole seu texto em português aqui:">{{ texto }}</textarea>
+            
+            <div class="upload-section">
+                <label for="arquivo">Ou faça upload de um arquivo:</label>
+                <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx,.txt">
+                <small>Aceitamos PDF, DOC, DOCX e TXT (até 16MB)</small>
+            </div>
             
             <button type="submit">Gerar Resumo</button>
 

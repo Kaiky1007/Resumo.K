@@ -8,17 +8,20 @@ O Resumo.K é uma aplicação web que utiliza técnicas de Processamento de Ling
 
 ## ✨ Funcionalidades
 
-- Resumo automático de textos em português
-- Interface web simples e intuitiva
-- Algoritmo baseado em frequência de palavras e importância de sentenças
-- Processamento de textos de diferentes tamanhos e complexidades
+- 📝 Upload de arquivos (PDF, DOCX, TXT)
+- ✍️ Digitação direta de texto
+- 🔍 Extração automática de texto de documentos
+- ✂️ Resumo por importância de sentenças
+- 📊 Comparativo de tamanho original vs. resumo
+- 🚀 Processamento rápido e eficiente
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python** (Linguagem principal)
-- **Flask** (Framework web)
-- **NLTK** (Processamento de linguagem natural)
-- **HTML/CSS** (Interface do usuário)
+- [Python](https://www.python.org/) - Linguagem principal
+- [Flask](https://flask.palletsprojects.com/) - Framework web
+- [NLTK](https://www.nltk.org/) - Processamento de linguagem natural
+- [PyPDF2](https://pypi.org/project/PyPDF2/) - Leitura de PDFs
+- [python-docx](https://python-docx.readthedocs.io/) - Leitura de arquivos Word
 
 ## 🚀 Como Executar o Projeto
 
