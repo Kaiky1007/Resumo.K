@@ -83,3 +83,87 @@ button:hover {
     color: #666;
     font-size: 0.8em;
 }
+
+.flash-messages {
+    max-width: 800px;
+    margin: 1rem auto;
+    transition: all 0.5s ease;
+}
+
+.flash-messages:empty {
+    display: none;
+}
+
+.flash-message {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    position: relative;
+    padding-left: 3rem;
+    opacity: 1;
+    max-height: 100px;
+    overflow: hidden;
+    transform-origin: top;
+    transition: all 0.5s ease;
+    animation: fadeOut 0.5s ease-in 5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        max-height: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+        transform: scaleY(0);
+    }
+}
+
+.flash-message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border-color: #ef9a9a;
+}
+
+.flash-message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-color: #a5d6a7;
+}
+
+.flash-message.info {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border-color: #90caf9;
+}
+
+.flash-message.warning {
+    background-color: #fff8e1;
+    color: #ff8f00;
+    border-color: #ffe082;
+}
+
+.flash-message.error:before {
+    content: "❌";
+}
+
+.flash-message.success:before {
+    content: "✅";
+}
+
+.flash-message.info:before {
+    content: "ℹ️";
+}
+
+.flash-message.warning:before {
+    content: "⚠️";
+}
+
+.flash-message:before {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 1.2rem;
+}

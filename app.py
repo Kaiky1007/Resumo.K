@@ -137,9 +137,9 @@ def index():
             file = request.files['arquivo']
             if file.filename != '':
                 if file.filename == '':
-                    flash('Nenhum arquivo selecionado', 'error')
+                    flash('Nenhum arquivo selecionado', 'warning')
                 elif not allowed_file(file.filename):
-                    flash('Tipo de arquivo não permitido', 'error')
+                    flash('Tipo de arquivo não permitido. Use PDF, DOC, DOCX ou TXT.', 'warning')
                 else:
                     filename = secure_filename(file.filename)
                     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -148,22 +148,37 @@ def index():
                         extension = filename.rsplit('.', 1)[1].lower()
                         texto = extract_text_from_file(filepath, extension)
                         os.remove(filepath)
-                        flash(f'Arquivo {filename} processado com sucesso!', 'success')
+                        flash(f'Arquivo "{filename}" processado com sucesso!', 'success')
+                        flash('Agora você pode gerar o resumo do texto extraído.', 'info')
                     except Exception as e:
                         flash(f'Erro ao processar arquivo: {str(e)}', 'error')
         
         if not texto and 'texto' in request.form:
             texto = request.form.get('texto', '')
+            if texto.strip():
+                flash('Texto recebido para processamento.', 'info')
         
         if not texto.strip():
-            flash('Por favor, insira um texto ou faça upload de um arquivo.', 'error')
+            flash('Por favor, insira um texto ou faça upload de um arquivo.', 'warning')
         else:
             try:
                 char_count = len(texto)
+                if char_count < 50:
+                    flash('Texto muito curto. Para melhores resultados, insira um texto com pelo menos 50 caracteres.', 'warning')
+                
                 resumo = resumir_texto(texto, num_sentencas=3)
                 char_count_resumo = len(resumo)
+                
+                if resumo:
+                    reducao = int((1 - char_count_resumo/char_count) * 100)
+                    flash(f'Resumo gerado com sucesso! Redução de {reducao}%.', 'success')
+                    flash('Você pode copiar o resumo abaixo ou fazer um novo.', 'info')
+                else:
+                    flash('Não foi possível gerar o resumo. O texto pode estar muito curto ou sem conteúdo significativo.', 'warning')
+                    
             except Exception as e:
                 flash(f'Erro ao gerar resumo: {str(e)}', 'error')
+                flash('Por favor, tente novamente com um texto diferente.', 'info')
     
     return render_template(
         'index.html',
