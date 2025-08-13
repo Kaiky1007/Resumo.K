@@ -10,31 +10,32 @@ import PyPDF2
 import docx
 import tempfile
 import re
+import gunicorn
 
-def check_nltk_resources():
-    """Verifica e baixa os recursos necessários do NLTK com tratamento de erros"""
-    resources = {
-        'punkt': 'tokenizers/punkt',
-        'stopwords': 'corpora/stopwords'
-    }
+# def check_nltk_resources():
+#     """Verifica e baixa os recursos necessários do NLTK com tratamento de erros"""
+#     resources = {
+#         'punkt': 'tokenizers/punkt',
+#         'stopwords': 'corpora/stopwords'
+#     }
     
-    for resource_name, resource_path in resources.items():
-        try:
-            nltk.data.find(resource_path)
-            print(f"Recurso do NLTK '{resource_name}' já instalado.")
-        except LookupError:
-            try:
-                print(f"Baixando recurso do NLTK '{resource_name}'...")
-                nltk.download(resource_name)
-                print(f"Recurso '{resource_name}' baixado com sucesso.")
-            except Exception as e:
-                raise Exception(f"Falha ao baixar recurso '{resource_name}': {str(e)}")
+#     for resource_name, resource_path in resources.items():
+#         try:
+#             nltk.data.find(resource_path)
+#             print(f"Recurso do NLTK '{resource_name}' já instalado.")
+#         except LookupError:
+#             try:
+#                 print(f"Baixando recurso do NLTK '{resource_name}'...")
+#                 nltk.download(resource_name)
+#                 print(f"Recurso '{resource_name}' baixado com sucesso.")
+#             except Exception as e:
+#                 raise Exception(f"Falha ao baixar recurso '{resource_name}': {str(e)}")
 
-try:
-    check_nltk_resources()
-except Exception as e:
-    print(f"Erro ao configurar recursos do NLTK: {str(e)}")
-    exit(1)
+# try:
+#     check_nltk_resources()
+# except Exception as e:
+#     print(f"Erro ao configurar recursos do NLTK: {str(e)}")
+#     exit(1)
 
 UPLOAD_FOLDER = tempfile.gettempdir()
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc', 'txt'}
@@ -189,5 +190,5 @@ def index():
         char_count_resumo=char_count_resumo
     )
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
