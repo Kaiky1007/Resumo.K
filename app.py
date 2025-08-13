@@ -36,7 +36,7 @@ import gunicorn
 # except Exception as e:
 #     print(f"Erro ao configurar recursos do NLTK: {str(e)}")
 #     exit(1)
-
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), 'nltk_data'))
 UPLOAD_FOLDER = tempfile.gettempdir()
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc', 'txt'}
 MAX_FILE_SIZE_MB = 16
